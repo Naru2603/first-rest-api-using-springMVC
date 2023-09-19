@@ -14,14 +14,14 @@ public class VoterServiceExceptionHandler {
 	public ResponseEntity handleInvalidVoterException(Exception e) {
 		System.out.println("Inside InvalidVoterException handler..!!");
 		System.out.println("Invalid voter exception Occurred..!!");
-		
+
 		System.out.println(e.getMessage());
-		
+
 		Error err = new Error();
 		err.setErrorMessage(e.getMessage());
 		err.setHttpStatus(HttpStatus.BAD_REQUEST);
-		
-		return new ResponseEntity (err, err.getHttpStatus());
-		
+
+		return new ResponseEntity(err, err.getHttpStatus());
+
 	}
 }
